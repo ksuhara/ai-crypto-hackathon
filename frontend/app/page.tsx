@@ -33,7 +33,7 @@ export default function Home() {
 
   const handleSubmit = async (user: string) => {
     setLoading(true);
-    const res = await fetch(`http://localhost:3000/api/ai-${user}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/ai-${user}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
