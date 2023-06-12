@@ -138,7 +138,7 @@ export default function Home() {
         {!loading ? (
           <button
             onClick={() => {
-              setMessages([])
+              setMessages(undefined)
               setLimit(5)
               handleSubmit("a")
             }}
